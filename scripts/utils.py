@@ -68,17 +68,17 @@ def createEmbed(p1, p2):
     # Stats fields
     embed.add_field(
         name="SkyWars",
-        value=f"`{sw_winner}` (`{sw_probs.max()*100}%`)",
+        value=f"`{sw_winner}` (`{sw_probs.max()*100}% chance`)",
         inline=False
     )
     embed.add_field(
         name="Bedwars",
-        value=f"`{bw_winner}` (`{bw_probs.max()*100}%`)",
+        value=f"`{bw_winner}` (`{bw_probs.max()*100}% chance`)",
         inline=False
     )
     embed.add_field(
         name="Duels",
-        value=f"`{duels_winner}` (`{duels_probs.max()*100}%`)",
+        value=f"`{duels_winner}` (`{duels_probs.max()*100}% chance`)",
         inline=False
     )
 
