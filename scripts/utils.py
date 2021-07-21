@@ -21,7 +21,7 @@ def winner(p1, p2):
     return [probability_p1, probability_p2]
 
 def playerStats(p):
-    from stats import Player
+    from scripts.stats import Player
     player = Player(p)
     player_preds = player.predict()
 
