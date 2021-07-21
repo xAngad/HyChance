@@ -1,10 +1,9 @@
 import os
 import discord
-import asyncio
 from dotenv import load_dotenv
 load_dotenv()
 
-from utils import createEmbed
+from scripts.utils import createEmbed
 
 class HyChance(discord.Client, discord.Embed):
     def __init__(self):
