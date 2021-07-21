@@ -29,4 +29,4 @@ class HyChance(discord.Client, discord.Embed):
 
 
 client = HyChance()
-client.run(os.getenv("TOKEN"))
+client.run(os.environ["TOKEN"])

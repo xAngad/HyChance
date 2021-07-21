@@ -9,7 +9,7 @@ class Player(object):
     def __init__(self, ign):
         super().__init__()
         self.uuid = MojangAPI.get_uuid(str(ign))
-        self.api = os.getenv("API_KEY")
+        self.api = os.environ["API_KEY"]
         self.link = f"https://api.hypixel.net/player?key={self.api}&uuid={self.uuid}"
         self.hydata = requests.get(self.link).json()
         self.stats = self.hydata["player"]["stats"]
