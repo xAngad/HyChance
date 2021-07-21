@@ -24,7 +24,6 @@ class HyChance(discord.Client, discord.Embed):
 
             embed = createEmbed(p1, p2)
 
-            # Embed with stats
             await message.channel.send(embed=embed)
 
 
