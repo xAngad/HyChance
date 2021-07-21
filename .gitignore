@@ -118,6 +118,8 @@ dmypy.json
 .idea
 
 .DS_Store
+hychance/
+hychance/*
 hychance/bin/normalizer
 hychance/bin/activate
 hychance/bin/activate.csh
