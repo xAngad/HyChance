@@ -134,3 +134,6 @@ hychance/bin/pip3.8
 hychance/bin/python
 hychance/bin/python3
 hychance/pyvenv.cfg
+hychance/bin/f2py
+hychance/bin/f2py3
+hychance/bin/f2py3.8
