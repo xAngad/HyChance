@@ -29,4 +29,5 @@ class HyChance(discord.Client, discord.Embed):
 
 
 client = HyChance()
+client.change_presence(activity=discord.Game(name="!duel"))
 client.run(os.environ["TOKEN"])
