@@ -118,3 +118,16 @@ dmypy.json
 .idea
 
 .DS_Store
+hychance/bin/normalizer
+hychance/bin/activate
+hychance/bin/activate.csh
+hychance/bin/activate.fish
+hychance/bin/Activate.ps1
+hychance/bin/chardetect
+hychance/bin/dotenv
+hychance/bin/pip
+hychance/bin/pip3
+hychance/bin/pip3.8
+hychance/bin/python
+hychance/bin/python3
+hychance/pyvenv.cfg
