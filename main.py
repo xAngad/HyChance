@@ -3,11 +3,12 @@ import discord
 from dotenv import load_dotenv
 load_dotenv()
 
-from scripts.utils import createEmbed
+from scripts.utils import createEmbed, createErrorEmbed
 
 class HyChance(discord.Client, discord.Embed):
     def __init__(self):
         super().__init__()
+        self.aliases = ["!duel", "!d", "!1v1"]
 
     async def on_ready(self):
         print("~~~~~~~~~~")
@@ -18,13 +19,17 @@ class HyChance(discord.Client, discord.Embed):
         if message.author.id == self.user.id:
             return
 
-        if message.content.startswith("!duel "):
-            players = message.content.split()
-            p1, p2 = players[1], players[2]
+        words = message.content.split()
+        if words[0] in self.aliases:
+            if len(words) == 3:
+                p1, p2 = words[1], words[2]
 
-            embed = createEmbed(p1, p2)
+                embedStats = createEmbed(p1, p2)
+                await message.channel.send(embed=embedStats)
 
-            await message.channel.send(embed=embed)
+            else:
+                embedError = createErrorEmbed()
+                await message.channel.send(embed=embedError)
 
 
 client = HyChance()
