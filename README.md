@@ -18,3 +18,9 @@ A Discord Bot that uses [Hypixel's API](https://api.hypixel.net) to predict the 
 ![Screenshot](./assets/hychance-demo-1.png)
 
 ![Screenshot](./assets/hychance-demo-2.png)
+
+#### Uses
+- [x] Python
+- [x] Discord.py
+- [x] Hypixel API
+- [x] Heroku
