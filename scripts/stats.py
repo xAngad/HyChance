@@ -24,6 +24,8 @@ class Player(object):
         raw["bw"]["deaths"] = self.stats["Bedwars"]["deaths_bedwars"] if "deaths_bedwars" in self.stats["Bedwars"] else 0
         raw["bw"]["fkills"] = self.stats["Bedwars"]["final_kills_bedwars"] if "final_kills_bedwars" in self.stats["Bedwars"] else 0
         raw["bw"]["fdeaths"] = self.stats["Bedwars"]["final_deaths_bedwars"] if "final_deaths_bedwars" in self.stats["Bedwars"] else 0
+        raw["bw"]["solo_fkills"] = self.stats["Bedwars"]["eight_one_final_kills_bedwars"] if "eight_one_final_kills_bedwars" in self.stats["Bedwars"] else 0
+        raw["bw"]["solo_fdeaths"] = self.stats["Bedwars"]["eight_one_final_deaths_bedwars"] if "eight_one_final_deaths_bedwars" in self.stats["Bedwars"] else 0
 
         # SkyWars
         raw["sw"]["kills"] = self.stats["SkyWars"]["kills"] if "kills" in self.stats["SkyWars"] else 0
@@ -41,7 +43,7 @@ class Player(object):
         predictions = {}
 
         predictions["sw"] = toPercentage(raw["sw"]["kills"], raw["sw"]["deaths"])
-        predictions["bw"] = (toPercentage(raw["bw"]["kills"], raw["bw"]["deaths"]) + toPercentage(raw["bw"]["fkills"], raw["bw"]["fdeaths"])) / 2
+        predictions["bw"] = toPercentage(raw["bw"]["solo_fkills"], raw["bw"]["solo_fdeaths"])
         predictions["duels"] = toPercentage(raw["duels"]["wins"], raw["duels"]["losses"])
 
         return predictions
